@@ -12,7 +12,7 @@
 
 |First Name|Last Name|Student ID|
 |---|---|---|
-|first|person|.......|
-|second|person|.......|
+|Ali|Afshar|9826653|
+|Alireza|Honardoost|9826233|
 
 
