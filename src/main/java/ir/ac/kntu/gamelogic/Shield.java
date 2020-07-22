@@ -3,15 +3,13 @@ package ir.ac.kntu.gamelogic;
 public class Shield {
 
     private int price;
-    private int increasesHP;
 
-    public void increase (Object o) {
-//      o. +=increasesHP;
+    public void increase (Player o) {
+        o.setHealth(o.getHealth()+80);
     }
 
     public Shield () {
         this.price = 1000;
-        this.increasesHP = 80;
     }
 
     public int getPrice() {

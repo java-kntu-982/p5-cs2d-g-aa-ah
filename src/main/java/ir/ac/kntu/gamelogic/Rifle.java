@@ -1,6 +1,6 @@
 package ir.ac.kntu.gamelogic;
 
-public abstract class Rifle extends Gun {
+public abstract class Rifle extends MainGun{
 
     private boolean isForCT;
 

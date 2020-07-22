@@ -6,6 +6,7 @@ public abstract class Gun {
     private int millisToFireAgain;
     private double secondsToReload;
     private int magazineCapacity;
+    private int numOfAmmo;
     private boolean isRifle;
 
     public Gun(int price, int damage, int millisToFireAgain, double secondsToReload, int magazineCapacity, boolean isRifle) {
@@ -15,6 +16,15 @@ public abstract class Gun {
         this.secondsToReload = secondsToReload;
         this.magazineCapacity = magazineCapacity;
         this.isRifle = isRifle;
+        numOfAmmo = magazineCapacity;
+    }
+
+    public boolean buyGun(Player p) {
+        if (p.getMoney() >= this.price ){
+            p.setMoney(p.getMoney()-price);
+            return true;
+        }
+        return false;
     }
 
     public int getPrice() {
