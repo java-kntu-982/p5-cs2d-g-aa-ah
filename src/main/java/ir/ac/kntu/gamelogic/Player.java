@@ -93,7 +93,6 @@ public abstract class Player {
     public void setShield() {
         this.shield = new Shield();
         shield.increase(this);
-
     }
 
     public int getHealth() {
