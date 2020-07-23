@@ -10,10 +10,10 @@ class BombTest {
     @Test
     void plant() {
 
-        assertEquals(true, testBomb.plant(1,1));
+        assertTrue(testBomb.plant(1, 1));
         assertEquals(1, testBomb.getX());
-        assertEquals(false, testBomb.getY()==2);
-        assertEquals(false, testBomb.plant(-1,-1));
+        assertFalse(testBomb.getY() == 2);
+        assertFalse(testBomb.plant(-1, -1));
 
     }
 }

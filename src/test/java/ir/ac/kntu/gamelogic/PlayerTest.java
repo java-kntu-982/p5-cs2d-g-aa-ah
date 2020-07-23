@@ -25,11 +25,11 @@ class PlayerTest {
     @Test
     void buyMainGun() {
         CTPlayer.setMoney(1000000);
-        assertEquals(true, CTPlayer.buyMainGun(mainGun));
+        assertTrue(CTPlayer.buyMainGun(mainGun));
         assertEquals("Famas", CTPlayer.getMainGun().getClass().getSimpleName());
 
         TPlayer.setMoney(1000000);
-        assertEquals(true, TPlayer.buyMainGun(mainGun0));
+        assertTrue(TPlayer.buyMainGun(mainGun0));
         assertEquals("Galil", TPlayer.getMainGun().getClass().getSimpleName());
 
     }
