@@ -23,6 +23,25 @@ public abstract class Player {
         setGunAtFirst();
     }
 
+    public boolean fireEnemy(Player[] enemies, int[] xOfTarget, int[] yOfTarget) {
+
+        for (int i = 0; i < enemies.length; i++) {
+            /// This condition depends on our gamePlay map /// :)
+            if ((enemies[i].getX() == xOfTarget[i]) && (enemies[i].getY() == yOfTarget[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean buyMainGun(MainGun mainGun) {
+        if (mainGun.buyGun(this)){
+            this.mainGun = mainGun;
+            return true;
+        }
+        return false;
+    }
+
     public abstract void setGunAtFirst();
 
     public int getX() {
@@ -66,13 +85,6 @@ public abstract class Player {
         return mainGun;
     }
 
-    public boolean buyMainGun(MainGun mainGun) {
-        if (mainGun.buyGun(this)){
-            this.mainGun = mainGun;
-            return true;
-        }
-        return false;
-    }
 
     public Shield getShield() {
         return shield;

@@ -19,7 +19,7 @@ public abstract class Gun {
         numOfAmmo = magazineCapacity;
     }
 
-    //TODO
+
 
     public boolean buyGun(Player p) {
         if (p.getMoney() >= this.price ){

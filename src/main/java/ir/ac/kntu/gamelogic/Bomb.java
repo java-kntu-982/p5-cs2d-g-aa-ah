@@ -11,8 +11,10 @@ public class Bomb {
         this.y = y;
     }
 
-    public boolean plant(int x,int y){// it depends on our map
-        if (x>0 && y>0) {//TODO
+    public boolean plant(int x, int y){
+
+        /// This condition depends on our gamePlay map /// :)
+        if (x > 0 && y > 0) {
             isPlant = true;
             this.x = x;
             this.y = y;

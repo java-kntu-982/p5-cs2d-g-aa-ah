@@ -5,7 +5,7 @@ public class Shield {
     private int price;
 
     public void increase (Player o) {
-        o.setHealth(o.getHealth()+80);
+        o.setHealth(o.getHealth() + 80);
     }
 
     public Shield () {
