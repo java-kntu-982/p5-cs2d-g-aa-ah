@@ -6,15 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
 
-    Player CTPlayer = new CTPlayer(50,67);
-    Player TPlayer = new TPlayer(45,63);
-    MainGun mainGun = new Famas();
-    MainGun mainGun0 = new Galil();
+    private Player cTPlayer = new CTPlayer(50,67);
+    private Player tPlayer = new TPlayer(45,63);
+    private MainGun mainGun = new Famas();
+    private MainGun mainGun0 = new Galil();
 
     @Test
     void setGunAtFirst() {
-        assertEquals( "USP",CTPlayer.getColt().getClass().getSimpleName());
-        assertEquals( "Glock",TPlayer.getColt().getClass().getSimpleName());
+        assertEquals( "USP",cTPlayer.getColt().getClass().getSimpleName());
+        assertEquals( "Glock",tPlayer.getColt().getClass().getSimpleName());
     }
 
     @Test
@@ -24,13 +24,13 @@ class PlayerTest {
 
     @Test
     void buyMainGun() {
-        CTPlayer.setMoney(1000000);
-        assertTrue(CTPlayer.buyMainGun(mainGun));
-        assertEquals("Famas", CTPlayer.getMainGun().getClass().getSimpleName());
+        cTPlayer.setMoney(1000000);
+        assertTrue(cTPlayer.buyMainGun(mainGun));
+        assertEquals("Famas", cTPlayer.getMainGun().getClass().getSimpleName());
 
-        TPlayer.setMoney(1000000);
-        assertTrue(TPlayer.buyMainGun(mainGun0));
-        assertEquals("Galil", TPlayer.getMainGun().getClass().getSimpleName());
+        tPlayer.setMoney(1000000);
+        assertTrue(tPlayer.buyMainGun(mainGun0));
+        assertEquals("Galil", tPlayer.getMainGun().getClass().getSimpleName());
 
     }
 }

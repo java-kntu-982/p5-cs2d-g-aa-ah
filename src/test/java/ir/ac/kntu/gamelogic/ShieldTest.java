@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ShieldTest {
 
-    Player player = new CTPlayer(14,22);
+    private Player player = new CTPlayer(14,22);
 
     @Test
     void increase() {

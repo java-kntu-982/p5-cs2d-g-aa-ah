@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GunTest {
 
-    Player player = new CTPlayer(50,100);
-    MainGun gun0 = new M4A1();
-    Colt gun1 = new P2000();
+    private Player player = new CTPlayer(50,100);
+    private MainGun gun0 = new M4A1();
+    private Colt gun1 = new P2000();
 
     @Test
     void buyGun() {
