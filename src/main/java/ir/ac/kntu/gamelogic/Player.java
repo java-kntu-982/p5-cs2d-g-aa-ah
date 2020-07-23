@@ -1,25 +1,46 @@
 package ir.ac.kntu.gamelogic;
 
 public abstract class Player {
+    private int x;
+    private int y;
     private int money;
     private Colt colt;
     private MainGun mainGun;
     private Shield shield;
     private int health;
-    private boolean isCTPlayer;
 
-    public Player(boolean isCTPlayer) {
+    public void setColt(Colt colt) {
+        this.colt = colt;
+    }
+
+    public Player(int x, int y) {
+        this.x = x;
+        this.y = y;
         this.money = 800;
         this.mainGun = null;
         this.shield = null;
         this.health = 100;
-        this.isCTPlayer = isCTPlayer;
-        if (isCTPlayer) {
-            this.colt = new Glock();
-        } else {
-            this.colt = new USP();
-        }
+        setGunAtFirst();
     }
+
+    public abstract void setGunAtFirst();
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
 
     public int getMoney() {
         return money;
@@ -71,11 +92,5 @@ public abstract class Player {
         this.health = health;
     }
 
-    public boolean isCTPlayer() {
-        return isCTPlayer;
-    }
 
-    public void setCTPlayer(boolean CTPlayer) {
-        isCTPlayer = CTPlayer;
-    }
 }
